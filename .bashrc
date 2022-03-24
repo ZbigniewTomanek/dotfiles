@@ -9,3 +9,4 @@ alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
 exec zsh
 . "$HOME/.cargo/env"
+
