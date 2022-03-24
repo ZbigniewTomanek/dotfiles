@@ -9,6 +9,18 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Turn borders off
+for_window [class="^.*"] border pixel 0
+
+# Change gap size
+gaps outer 5
+gaps inner 5
+gaps top 5
+
+# Drag floating windows
+floating_modifier $mod
+
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -220,7 +232,7 @@ bar {
 bindsym $mod+Shift+x exec --no-startup-id ~/.local/bin/matrixlock.sh
 
 # set wallpaper
-exec_always feh --bg-scale  ~/Images/wallpaper.png
+exec_always feh --bg-scale --scale  ~/Images/wallpaper.png
 
 # screenshot
 bindsym Print exec flameshot gui
@@ -236,7 +248,7 @@ bindsym $mod+Shift+a exec amixer -q set Master toggle
 
 # autostart
 exec --no-startup-id xsettingsd &
-exec --no-startup-id compton -b --config  ~/.config/compton/compton.conf
+exec --no-startup-id picom --config  ~/.config/picom/picom.conf
  
 # move containers between envs
 bindsym $mod+Ctrl+less move workspace to output down

@@ -1,5 +1,9 @@
-theme = "slick"
-icons = "awesome5"
+icons = "awesome"
+
+[theme]
+name = "slick"
+[theme.overrides]
+alternating_tint_bg = "#00000000"
 
 [[block]]
 block = "pacman"
@@ -30,6 +34,7 @@ format_swap = "{swap_used_percents}"
 [[block]]
 block = "cpu"
 interval = 1
+format = "{utilization} {frequency}"
 
 [[block]]
 block = "sound"
